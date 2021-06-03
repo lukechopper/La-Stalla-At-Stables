@@ -1,0 +1,83 @@
+#menuContainer {
+  text-align: center;
+  padding: 0 20px 100px 20px;
+}
+
+#menuContainer h1 {
+  font-size: 40px;
+  font-family: "DroidSans";
+  text-transform: uppercase;
+  margin-top: 70px;
+}
+
+#headInfo {
+  color: #404040;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+#menuSect {
+  margin-top: 70px;
+}
+
+.itemHead {
+  font-family: "DroidSans";
+  color: #404040;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+
+.itemBody {
+  color: gray;
+  font-style: italic;
+  margin-top: 30px;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+/*Arrows*/
+#leftArrow {
+  position: fixed;
+  cursor: pointer;
+  top: 50%;
+  font-size: 80px;
+  left: 40px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#rightArrow {
+  position: fixed;
+  cursor: pointer;
+  top: 50%;
+  font-size: 80px;
+  right: 40px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#arrowHolder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  z-index: -10;
+}
+
+@media (max-width: 1200px) {
+  #leftArrow {
+    position: static;
+    transform: unset !important;
+    margin: 0 80px;
+  }
+
+  #rightArrow {
+    position: static;
+    transform: unset !important;
+    margin: 0 80px;
+  }
+
+  #menuContainer h1 {
+    margin-top: 50px;
+  }
+}

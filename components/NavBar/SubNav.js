@@ -15,7 +15,7 @@ function SubNav({state}) {
             {transform: "scaleY(0)"}}>
                 <div className="paraDiv">
                 <Link href="/"><p>Home</p></Link>
-                <p>Menu</p>
+                <Link href="/menu"><p>Menu</p></Link>
                 <Link href="/gallery"><p>Gallery</p></Link>
                 <Link href="/locations"><p>Locations</p></Link>
                 </div>
