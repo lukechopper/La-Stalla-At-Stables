@@ -8,7 +8,7 @@ function Map(props) {
 
     return (
         <GoogleMapReact
-        bootstrapURLKeys={{key: "AIzaSyBDB4NdOsRQKiPAglkqkGUpx4wbO_cXeqg"}}
+        bootstrapURLKeys={{key: process.env.NEXT_PUBLIC_GOOGLE_MAP}}
         center={{lat: 52.367451, lng: -1.808420}}
         zoom={18}
         onClick={() => setShowMarker(false)}>
