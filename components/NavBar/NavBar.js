@@ -21,7 +21,7 @@ function NavBar(props) {
                     setShouldAnimate(true);
                 }
             }else{
-                if(windowScroll > 100 ){
+                if(windowScroll > 0 ){
                     setShouldAnimate(false);
                 }
             }

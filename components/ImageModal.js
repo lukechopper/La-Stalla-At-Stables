@@ -13,8 +13,8 @@ function ImageModal({imageModal, closeModal, state, images}) {
             }}>&#10132;</span>
             <img src={images[currentImage].img} 
             className={images[currentImage].type !== 0 ? modalStyle.expand : null}
-            style={state === "entering" ? {animation: "zoomIn 0.3s forwards"} : state === "entered" ? {transform: "scale(1, 1)"}
-            : {transform: "scale(0, 0)"}} />
+            style={(state === "entering" ? {animation: "zoomIn 0.3s forwards"} : state === "entered" ? {transform: "scale(1, 1)"}
+            : {transform: "scale(0, 0)"}) } />
             <span onClick={() => {
                 if(currentImage >= images.length - 1) return;
                 setCurrentImage(prev => ++prev);
