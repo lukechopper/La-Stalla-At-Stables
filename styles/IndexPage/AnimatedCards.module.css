@@ -1,0 +1,109 @@
+.pictText {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.pictText video {
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#pictText1 > section:nth-child(1) {
+  height: 0;
+  position: relative;
+  width: 70%;
+  padding-top: 50%;
+}
+
+#pictText1 > section:nth-child(2) {
+  width: 100%;
+  padding: 40px 0 0 40px;
+}
+
+#pictText1 p:nth-child(1) {
+  font-family: "DroidSerif";
+  font-style: italic;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: green;
+}
+
+#pictText1 p:nth-child(2) {
+  font-family: "DroidSerif";
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#pictText1 p:nth-child(3) {
+  color: gray;
+  font-size: 17px;
+  line-height: 30px;
+  padding-top: 20px;
+}
+
+#pictText2 > section:nth-child(1) {
+  width: 100%;
+  padding: 40px 40px 0 0;
+}
+
+#pictText2 > section:nth-child(2) {
+  height: 0;
+  position: relative;
+  width: 70%;
+  padding-top: 50%;
+}
+
+#pictText2 p:nth-child(1) {
+  font-family: "DroidSerif";
+  font-style: italic;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: green;
+}
+
+#pictText2 p:nth-child(2) {
+  font-family: "DroidSerif";
+  font-weight: bold;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+#pictText2 p:nth-child(3) {
+  color: gray;
+  font-size: 17px;
+  line-height: 30px;
+  padding-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  #pictText1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  #pictText1 > section:nth-child(1) {
+    width: 100%;
+    padding-top: 80%;
+  }
+  #pictText1 > section:nth-child(2) {
+    padding: 40px 0 0 0;
+  }
+  #pictText2 {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #pictText2 > section:nth-child(1) {
+    padding: 40px 0 0 0;
+  }
+  #pictText2 > section:nth-child(2) {
+    width: 100%;
+    padding-top: 80%;
+  }
+}

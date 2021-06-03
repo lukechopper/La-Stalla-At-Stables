@@ -1,0 +1,48 @@
+#modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  font-size: 40px;
+  color: white;
+}
+
+#modalContainer span:nth-child(1) {
+  transform: scaleX(-1);
+}
+
+#modalContainer span {
+  margin: 0 40px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 50px;
+}
+
+#modalImgContainer {
+  position: relative;
+}
+
+#modalContainer img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+
+.expand {
+  max-width: 1200px !important;
+}
+
+#closeX {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}

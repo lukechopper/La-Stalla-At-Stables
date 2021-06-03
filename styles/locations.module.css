@@ -1,0 +1,75 @@
+#header {
+  font-family: "DroidSans";
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0;
+}
+
+#mainSect {
+  margin: 30px auto 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-around;
+}
+
+#mainSect #sectText {
+  font-size: 30px;
+  width: 50%;
+  padding-right: 30px;
+  padding-top: 30px;
+}
+
+#mainSect #sectText h1 {
+  font-size: 33px;
+  font-style: italic;
+  font-family: "DroidSans";
+  color: green;
+}
+
+#mainSect #sectText p {
+  margin: 20px 0;
+  font-family: "DroidSans";
+}
+
+#mapContainer {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+
+#mapContainer > * {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.subHeader {
+  color: gray;
+  text-align: center;
+}
+
+#facebookIcon {
+  color: #1771e6;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  #mainSect {
+    flex-direction: column;
+  }
+  #mainSect #sectText {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #mapContainer {
+    height: 400px;
+  }
+}
