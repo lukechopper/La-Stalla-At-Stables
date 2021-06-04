@@ -16,11 +16,11 @@ export default function Home() {
 
 
   return (
-    < >
+    <div style={{width: "100%", overflowX: "hidden"}}>
       <OpenImg />
       <AnimatedCards />
       <ThinStrip />
       <MapContainer />
-    </>
+    </div>
   )
 }

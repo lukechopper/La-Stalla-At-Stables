@@ -47,9 +47,6 @@ export function GlobalContext({children}) {
                 setWindowScroll(window.scrollY);
             });
           }
-          if(typeof document !== "undefined"){
-            document.body.style.overflowX = "hidden";
-        } 
     }, []);
 
     const value = {
