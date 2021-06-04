@@ -46,6 +46,14 @@ export function GlobalContext({children}) {
             addEventListener("scroll", () => {
                 setWindowScroll(window.scrollY);
             });
+            //Prevent overscroll
+            addEventListener("touchstart", e => {
+                if( e.scrollTop === 0 ) {
+                    e.scrollTop += 1;
+                } else if( e.scrollTop + e.offsetHeight >= e.scrollHeight ) {
+                    e.scrollTop -= 1;
+                }
+            });
           }
     }, []);
 
