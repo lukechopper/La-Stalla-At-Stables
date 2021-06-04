@@ -29,9 +29,8 @@
 }
 
 #modalContainer img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
+  width: auto;
+  height: 90%;
   transform-origin: center;
   transition: transform 0.3s;
 }
@@ -45,13 +44,5 @@
   right: 20px;
   top: 20px;
   cursor: pointer;
-}
-
-@media (max-height: 500px) {
-  #modalContainer img {
-    width: auto;
-    height: 90%;
-    transform-origin: center;
-    transition: transform 0.3s;
-  }
+  z-index: 100;
 }
