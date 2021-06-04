@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import NavBar from '../NavBar/NavBar';
 import {Transition} from 'react-transition-group';
 import Footer from '../../components/Footer';
@@ -6,9 +6,15 @@ import Head from 'next/head';
 //Global Context
 import {useGlobalContext} from '../../context/GlobalContext';
 
-function Page({ Component, pageProps }) {
+function Page({ Component, pageProps, load }) {
 
     const {clickHamburger, setClickHamburger} = useGlobalContext();
+
+    useEffect(() => {
+        if(load){
+            setClickHamburger(false);
+        }
+    }, [load])
 
     return (
         <>

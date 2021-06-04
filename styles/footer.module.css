@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #f2f2f2;
   margin-top: 20px;
+  position: relative;
 }
 
 #footer > div {
