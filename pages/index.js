@@ -14,11 +14,6 @@ export default function Home() {
     assignCurrentPage(1);
   }, []);
 
-  if(typeof document !== "undefined"){
-    document.body.style.overflowX = "hidden";
-    document.documentElement.style.overflowX = "hidden";
-} 
-
 
   return (
     < >
