@@ -16,15 +16,16 @@ export default function Home() {
 
   if(typeof document !== "undefined"){
     document.body.style.overflowX = "hidden";
+    document.documentElement.style.overflowX = "hidden";
 } 
 
 
   return (
-    <div style={{width: "100%"}}>
+    < >
       <OpenImg />
       <AnimatedCards />
       <ThinStrip />
       <MapContainer />
-    </div>
+    </>
   )
 }
