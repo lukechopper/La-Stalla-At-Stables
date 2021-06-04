@@ -12,7 +12,11 @@ export default function Home() {
 
   useEffect(() => {
     assignCurrentPage(1);
-  }, [])
+  }, []);
+
+  if(typeof document !== "undefined"){
+    document.body.style.overflowX = "hidden";
+} 
 
 
   return (

@@ -53,7 +53,7 @@ function AnimatedCards(props) {
           <section>
             <p>feel good</p>
             <p>Friendly staff, good food</p>
-            <p>Our Restaurant makes customer satisfaction a priority. The environment is as warm and friendly as the staff themselves. Repeated customers know that they are going to have a good night when they book a table with us.</p>
+            <p>Our Restaurant makes customer satisfaction a priority. The environment is as warm and friendly, just like the staff. Repeated customers know that they are going to have a good night when they book a table with us.</p>
           </section>
           <section>
           <video autoPlay muted loop src="../Assets/CroppedVid1.mp4" />
