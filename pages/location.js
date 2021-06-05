@@ -22,7 +22,7 @@ function locations(props) {
                 <h1>Cottage Farm Stables</h1>
                 <p>100 Illshaw Heath Road</p>
                 <p>Solihull, B94 6DL</p>
-                <p>Tel: 01564 703314</p>
+                <a href="tel:+4401564703314" style={{textDecoration: "underline"}}><p>Tel: 01564 703314</p></a>
             </div>
             <div id={styles.mapContainer}>
                 <Map />

@@ -9,7 +9,7 @@ function Footer(props) {
             <Link href="/"><p>Home</p></Link>
                 <Link href="/menu"><p>Menu</p></Link>
                 <Link href="/gallery"><p>Gallery</p></Link>
-                <Link href="/locations"><p>Locations</p></Link>
+                <Link href="/location"><p>Location</p></Link>
             </div>
         </section>
     );
