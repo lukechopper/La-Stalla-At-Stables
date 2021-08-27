@@ -7,56 +7,41 @@ import {useGlobalContext} from '../context/GlobalContext';
 
 function menu(props) {
 
-    const {assignCurrentPage} = useGlobalContext();
-    const [menuItem, setMenuItem] = useState(0);
-    const [transition, setTransition] = useState("NAN"); 
+    const [singleCol, setSingleCol] = useState(false);
 
     useEffect(() => {
-      assignCurrentPage(2);
+        setSingleCol(window.innerWidth < 1001);
+        addEventListener('resize', () => {
+            setSingleCol(window.innerWidth < 1001);
+        });
     }, []);
-
-    useEffect(() => {
-        if(transition === "BEGIN"){
-        setTimeout(() => {
-            setTransition("BACK");
-        }, 600);
-    }else if(transition === "BACK"){
-        setTimeout(() => {
-            setTransition("NAN");
-        }, 1000);
-    }
-    }, [transition]);
-
-    const beginChange = (dir) => {
-        if(dir === "RIGHT"){
-            if(transition === "NAN" && data[menuItem + 1]){
-                setTransition("BEGIN");
-                setTimeout(() => {
-                    setMenuItem(prev => prev+1);
-                }, 600);
-            }
-        }else if(dir === "LEFT"){
-            if(transition === "NAN" && data[menuItem - 1]){
-                setTransition("BEGIN");
-                setTimeout(() => {
-                    setMenuItem(prev => prev-1);
-                }, 600);
-            }
-        }
-    }
-
-
-    return (
-        <>
-        <div id={styles.arrowHolder}>
-        <i className="fas fa-arrow-left" onClick={() => beginChange("LEFT")}
-        id={styles.leftArrow}></i>
-        <i className="fas fa-arrow-right" onClick={() => beginChange("RIGHT")}
-        id={styles.rightArrow}></i>
+    
+    return (!singleCol ? (
+            <div className={styles.mainContainer}>
+            <div className={styles.column}>
+                {data.map((menu, index) => {
+                    if(index % 2 === 0){ //ODD
+                        return <MenuSlice menu={menu} key={index} />
+                    }
+                })}
+            </div>
+            <div className={styles.column}>
+                {data.map((menu, index) => {
+                    if(index % 2 !== 0){ //EVEN
+                        return <MenuSlice menu={menu} key={index} />
+                    }
+                })}
+            </div>
         </div>
-        <MenuSlice data={data} menuItem={menuItem } transition={transition} />
-        </>
-    );
+        ) : (
+            <div className={styles.mainContainer}>
+            <div className={styles.column}>
+                {data.map((menu, index) => (
+                    <MenuSlice menu={menu} key={index} />
+                ))}
+            </div>
+        </div>
+        ))
 }
 
 export default menu;
