@@ -8,8 +8,11 @@ import {useGlobalContext} from '../context/GlobalContext';
 function menu(props) {
 
     const [singleCol, setSingleCol] = useState(false);
+    const {assignCurrentPage} = useGlobalContext();
+
 
     useEffect(() => {
+        assignCurrentPage(2);
         setSingleCol(window.innerWidth < 1001);
         addEventListener('resize', () => {
             setSingleCol(window.innerWidth < 1001);
@@ -18,15 +21,19 @@ function menu(props) {
     
     return (!singleCol ? (
             <div className={styles.mainContainer}>
-            <div className={styles.column}>
+            <div className={styles.leftCol}>
                 {data.map((menu, index) => {
+                    if(index === data.length - 1) return;
                     if(index % 2 === 0){ //ODD
                         return <MenuSlice menu={menu} key={index} />
                     }
                 })}
             </div>
-            <div className={styles.column}>
+            <div className={styles.rightCol}>
                 {data.map((menu, index) => {
+                    if(index === data.length - 1){
+                        return <MenuSlice menu={menu} key={index} />
+                    }
                     if(index % 2 !== 0){ //EVEN
                         return <MenuSlice menu={menu} key={index} />
                     }

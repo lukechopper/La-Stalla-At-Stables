@@ -10,7 +10,7 @@ function MenuSlice({menu}) {
             <h1 className={styles.header}>{menu.title}</h1>
             {menu.items.map((item, index) => (
                 <div key={index}>
-                <h3 className={styles.menuHeader}>{item.title} - {item.price}</h3>
+                <h3 className={styles.menuHeader}>{item.title} {item.title && '-'} {item.price}</h3>
                 <p className={styles.desc}>{item.desc}</p>
                 </div>
             ))}

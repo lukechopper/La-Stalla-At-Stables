@@ -343,5 +343,15 @@ export const data = [
                 price: "£5.95",
             },
          ]
+    },
+    {
+        title: "Vegan",
+         items: [
+             {
+                 title: "",
+                 price: "",
+                 desc: "Vegan options are welcome"
+             },
+         ]
     }
 ]

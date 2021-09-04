@@ -10,7 +10,7 @@ function locations(props) {
 
     useEffect(() => {
         assignCurrentPage(4);
-    }, [])
+    }, []);
 
     return (
         <div>
