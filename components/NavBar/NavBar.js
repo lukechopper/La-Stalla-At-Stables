@@ -40,7 +40,7 @@ function NavBar(props) {
             state === "entering" || state === "entered" ? {transform: "translateY(0)"} : null }>
             <div id={navBarStyles.mainNav}>
                 <Hamburger />
-                <Link href="/"><p>La Stalla At Stables</p></Link>
+                <Link href="/"><p>La Stalla At Balsall</p></Link>
                 <div></div>
             </div>
             <Transition

@@ -11,13 +11,13 @@ function Map(props) {
         <GoogleMapReact
         bootstrapURLKeys={{key: process.env.NEXT_PUBLIC_GOOGLE_MAP}}
         center={{lat: props.lat, lng: props.lng}}
-        zoom={18}
+        zoom={20}
         onClick={() => setShowMarker(false)}>
         <LocationMarker lat={props.lat} lng={props.lng}
-            title="La Stalla At Stables"
-            desc1="100 Illshaw Heath Road"
-            desc2="Solihull, B94 6DL"
-            desc3="01564 703314"
+            title="La Stalla At Balsall"
+            desc1="299 Kenilworth Road"
+            desc2="Coventry, CV7 7FE"
+            desc3="01676 248143"
             setShowMarker={setShowMarker}
             showMarker={showMarker}
         />
@@ -26,8 +26,8 @@ function Map(props) {
 }
 
 Map.defaultProps = {
-    lat: 52.367451,
-    lng: -1.808420
+    lat: 52.392011,
+    lng: -1.650010
 }
 
 export default Map;

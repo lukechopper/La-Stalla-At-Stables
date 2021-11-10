@@ -16,11 +16,11 @@ function MapContainer(props) {
             <DocumentContainer>
             <section id={styles.mapPart}>
                 <div className={styles.text}>
-                    <p style={{color: "green"}}>La Stalla At Stables</p>
-                    <p>100 Illshaw Heath Road</p>
-                    <p>Solihull, B94 6DL</p>
+                    <p style={{color: "green"}}>La Stalla At Balsall</p>
+                    <p>299 Kenilworth Road</p>
+                    <p>Coventry, CV7 7FE</p>
                     <br/>
-                    <p>01564 703314</p>
+                    <p>01676 248143</p>
                 </div>
                 <div className={styles.realMap}>
                     <Map />
