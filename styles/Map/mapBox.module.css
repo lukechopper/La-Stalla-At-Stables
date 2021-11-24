@@ -1,0 +1,11 @@
+.infoBox{
+    font-size: 15px;
+}
+
+.infoBox > p{
+    margin: 2.5px 0;
+}
+
+.green{
+    color: green;
+}

@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import '../styles/hamburgers.css';
 import '../styles/nprogress/nprogress.css';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import React, {useState} from 'react';
 import Page from '../components/Page/Page';
 import Router from 'next/router';

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useGlobalContext} from '../context/GlobalContext';
 import DocumentContainer from '../components/DocumentContainer';
 import styles from '../styles/locations.module.css';
-import Map from '../components/Map/Map';
+import MapBox from '../components/Map/MapBox';
 
 function locations(props) {
 
@@ -25,7 +25,7 @@ function locations(props) {
                 <a href="tel:+4401676248143" style={{textDecoration: "underline"}}><p style={{display: "inline"}}>Tel: 01676 248143</p></a>
             </div>
             <div id={styles.mapContainer}>
-                <Map />
+                <MapBox height='600px' />
             </div>
             </section>
           </DocumentContainer>  

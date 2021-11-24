@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useDebugValue } from 'react';
+import React, { useState, useEffect } from 'react';
 import galleryStyle from '../styles/gallery.module.css';
 import Image from '../components/Image';
 import ImageModal from '../components/ImageModal';

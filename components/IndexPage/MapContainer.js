@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../styles/IndexPage/MapContainer.module.css';
 import DocumentContainer from '../DocumentContainer';
-import Map from '../Map/Map';
+import MapBox from '../Map/MapBox';
 
 function MapContainer(props) {
 
@@ -23,7 +23,7 @@ function MapContainer(props) {
                     <p>01676 248143</p>
                 </div>
                 <div className={styles.realMap}>
-                    <Map />
+                    <MapBox height='250px' />
                 </div>
             </section>
             </DocumentContainer>
