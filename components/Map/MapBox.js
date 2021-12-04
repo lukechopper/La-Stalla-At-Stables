@@ -12,7 +12,7 @@ function MapBox(props) {
         return {
             height: props.height
         };
-    }, []);
+    }, [props.height]);
 
     useEffect(() => {
         map.current = new mapboxgl.Map({
