@@ -43,6 +43,9 @@ export function GlobalContext({children}) {
             addEventListener("resize", () => {
                 setWindowWidth(window.innerWidth);
             });
+            addEventListener("load", () => {
+                setWindowScroll(window.scrollY);
+            });
             addEventListener("scroll", () => {
                 setWindowScroll(window.scrollY);
             });
