@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import galleryStyle from '../styles/gallery.module.css';
 import Image from '../components/Image';
 import ImageModal from '../components/ImageModal';
@@ -8,8 +8,7 @@ import DocumentContainer from '../components/DocumentContainer';
 import {useGlobalContext} from '../context/GlobalContext';
 
 function gallery(props) {
-    const images = [];
-    const imagePrefix = "IMG-20210531-WA00";
+    const imagePrefix = "IMG-20211205-WA00";
     //Image Modal
     const [imageModal, setImageModal] = useState(null);
     const {showModal, setShowModal, windowWidth, hideScroll, openScroll, assignCurrentPage } = useGlobalContext();
@@ -18,16 +17,25 @@ function gallery(props) {
         assignCurrentPage(3);
     }, []);
 
-    const generateImages = (() => {
-        for(let i = 0; i < 26; i++){
+    const generateImages = () => {
+        let tempImages = [];
+        let realIndex = 0;
+        for(let i = 1; i <= 29; i++){
+            if(i === 8) continue;
             let imageSrc = imagePrefix + (i < 10 ? "0" + i : i) + ".jpg";
-            let imagePath = "../Assets/" + imageSrc;
+            let imagePath = "../Assets/lastallaphotos/" + imageSrc;
             let type = 0;
-            if(i === 0) type = 1;
-            if(i === 10) type = 2;
-            images.push({img: imagePath, type, index: i});
+            if(i === 1 || i === 13 || i === 15) type = 1;
+            if(i === 29 || i === 27) type = 2;
+            tempImages.push({img: imagePath, type, index: realIndex});
+            realIndex++;
         }
-    })();
+        return tempImages;
+    };
+
+    const images = useMemo(() => {
+        return generateImages();
+    }, []);
 
 
     //Set image for image modal
@@ -59,12 +67,11 @@ function gallery(props) {
         <div id={galleryStyle.gallery}  >
             {images.map((img, index) => {
                 let styles = [galleryStyle.imgContainer, 
-                img.type === 1 || img.type === 2 ? galleryStyle.widerImage : null,
-                img.type === 2 && galleryStyle.secondLarge ];
+                img.type === 1 ? galleryStyle.widerImage : null];
 
                 return (
                 <Image styles={styles} img={img} index={index} key={index}
-                setImage={setImage} currentImage />
+                setImage={setImage} />
                 )
             })}
         </div>

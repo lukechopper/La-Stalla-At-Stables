@@ -26,8 +26,6 @@ function Page({ Component, pageProps, load }) {
         <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap" rel="stylesheet" /> 
         {/*PT Serif*/}
         <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
-        {/*Font Awesome*/}
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"></link> 
         {/*Favicon*/}
         <link rel="shortcut icon" href="../favicon/favicon.ico"/>
         <title>La Stalla At Balsall</title>
