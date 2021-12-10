@@ -37,7 +37,7 @@ function AnimatedCards(props) {
       <DocumentContainer>
         <div id={indexStyles.pictText1} className={indexStyles.pictText}>
           <section>
-          <video autoPlay muted playsInline loop src="../Assets/lastallavideos/VID-20211205-WA0032.mp4" />
+          <video autoPlay muted playsInline loop src="../Assets/VID-20211205-WA0032.mp4" />
           </section>
           <section>
             <p>always expect</p>
@@ -56,7 +56,7 @@ function AnimatedCards(props) {
             <p>Our Restaurant makes customer satisfaction a priority. The environment is as warm and friendly, just like the staff. Repeated customers know that they are going to have a good night when they book a table with us.</p>
           </section>
           <section>
-          <video autoPlay muted playsInline loop src="../Assets/lastallavideos/VID-20211205-WA0031.mp4" />
+          <video autoPlay muted playsInline loop src="../Assets/VID-20211205-WA0031.mp4" />
           </section>
         </div>
       </DocumentContainer>

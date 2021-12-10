@@ -23,7 +23,7 @@ function gallery(props) {
         for(let i = 1; i <= 29; i++){
             if(i === 8) continue;
             let imageSrc = imagePrefix + (i < 10 ? "0" + i : i) + ".jpg";
-            let imagePath = "../Assets/lastallaphotos/" + imageSrc;
+            let imagePath = "../Assets/" + imageSrc;
             let type = 0;
             if(i === 1 || i === 13 || i === 15) type = 1;
             if(i === 29 || i === 27) type = 2;
