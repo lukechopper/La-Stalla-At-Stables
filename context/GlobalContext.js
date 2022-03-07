@@ -17,6 +17,7 @@ export function GlobalContext({children}) {
     const [showModal, setShowModal] = useState(false);
     const [clickHamburger, setClickHamburger] = useState(false);
     const [windowWidth, setWindowWidth] = useState(null);
+    const [windowHeight, setWindowHeight] = useState(null);
     const [windowScroll, setWindowScroll] = useState();
     //The current page that we are on
     const [currentPage, assignCurrentPage] = useState(null);
@@ -40,6 +41,7 @@ export function GlobalContext({children}) {
             // browser code
             setWindowWidth(window.innerWidth);
             addEventListener("resize", () => {
+                setWindowHeight(window.innerHeight);
                 setWindowWidth(window.innerWidth);
             });
             addEventListener("load", () => {
@@ -66,6 +68,7 @@ export function GlobalContext({children}) {
         setClickHamburger,
         windowWidth,
         setWindowWidth,
+        windowHeight,
         windowScroll,
         setWindowScroll,
         hideScroll,

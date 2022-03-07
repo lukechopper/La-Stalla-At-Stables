@@ -49,35 +49,14 @@
   height: 50px;
 }
 
-@media (max-width: 1200px){
-  #modalContainer img.expand {
-    height: auto;
-    width: 90%;
-    transform-origin: center;
-    transition: transform 0.3s;
-  }
+
+#modalContainer img.sizeOnWidth{
+  width: 90%;
+  height: auto;
 }
 
-@media (max-width: 100vh) {
-  #modalContainer img {
-    height: auto;
-    width: 90%;
-    transform-origin: center;
-    transition: transform 0.3s;
-  }
-  #modalContainer img.contract {
-    width: auto;
-    height: 90%;
-    transform-origin: center;
-    transition: transform 0.3s;
-  }
+#modalContainer img.sizeOnWidth.expand{
+  width: 90%;
+  height: auto;
 }
 
-@media (max-width: 600px){
-  #modalContainer img.contract {
-    height: auto;
-    width: 90%;
-    transform-origin: center;
-    transition: transform 0.3s;
-  }
-}
