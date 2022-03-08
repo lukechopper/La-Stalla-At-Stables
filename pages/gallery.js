@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import galleryStyle from '../styles/gallery.module.css';
 import Image from '../components/Image';
 import ImageModal from '../components/ImageModal';
@@ -12,6 +12,8 @@ function gallery(props) {
     //Image Modal
     const [imageModal, setImageModal] = useState(null);
     const {showModal, setShowModal, windowWidth, hideScroll, openScroll, assignCurrentPage } = useGlobalContext();
+    //Last Image Model Ele
+    const imageEle = useRef(null);
 
     useEffect(() => {
         assignCurrentPage(3);
@@ -27,6 +29,8 @@ function gallery(props) {
             let type = 0;
             if(i === 1 || i === 13 || i === 15) type = 1;
             if(i === 27) type = 2;
+            if(i === 23) type = 3;
+            if(i === 25) type = 4;
             tempImages.push({img: imagePath, type, index: realIndex});
             realIndex++;
         }
@@ -50,6 +54,16 @@ function gallery(props) {
     const closeModal = () => {
         setShowModal(false);
         openScroll();
+        if(imageEle.current){
+            const imageEleArr = Array.prototype.slice.call(document.getElementsByTagName('img'));
+            const matchEle = imageEleArr.filter(ele => ele.getAttribute('src') === imageEle.current.getAttribute('src'));
+            if(!matchEle.length) return;
+            let targetImage;
+            if(matchEle.length > 1){ targetImage = matchEle[1]}
+            else targetImage = matchEle[0];
+            if(targetImage.parentNode.offsetTop < 200) return;
+            window.scrollTo(0, targetImage.parentNode.offsetTop-10);
+        }
     }
 
     return (
@@ -61,7 +75,7 @@ function gallery(props) {
         mountOnEnter>
             {state => (
                  <ImageModal imageModal={imageModal} images={images}
-                closeModal={closeModal} state={state} />
+                closeModal={closeModal} state={state} imageEle={imageEle} />
             )}
         </Transition>
         <div id={galleryStyle.gallery}  >
