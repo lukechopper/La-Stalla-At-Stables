@@ -44,9 +44,10 @@ export function GlobalContext({children}) {
                 setWindowHeight(window.innerHeight);
                 setWindowWidth(window.innerWidth);
             });
-            addEventListener("load", () => {
+            // addEventListener("load", () => {
+                //For the first time on webpage load
                 setWindowScroll(window.scrollY);
-            });
+            // });
             addEventListener("scroll", () => {
                 setWindowScroll(window.scrollY);
             });

@@ -23,15 +23,34 @@
 .hours {
   margin-top: 50px;
   font-size: 17px;
+  display: flex;
+  justify-content: center;
 }
 
-.hours > p:nth-child(1) {
+.hours .row{
+  margin: 0 49px;
+}
+
+.hours .green {
   color: green;
 }
 
-.hours > p:nth-child(2) {
+.hours .black {
   margin-top: 20px;
   color: black;
+}
+
+@media (max-width: 600px) {
+  .hours{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .hours .row{
+    margin: 0 0px;
+  }
+  .hours .row:nth-child(2){
+    margin-top: 40px;
+  }
 }
 
 #mapPart {

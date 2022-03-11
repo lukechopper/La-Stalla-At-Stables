@@ -87,6 +87,12 @@
   }
 }
 
+@media (max-width: 350px){
+  #mainNav p {
+    font-size: 27px;
+  }
+}
+
 @media (max-width: 600px) {
   #subNav p:nth-child(1) {
     margin-left: 0px;

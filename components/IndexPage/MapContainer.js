@@ -10,8 +10,14 @@ function MapContainer(props) {
             <p>come dine in</p>
             <p>hours and location</p>
             <div className={styles.hours}>
-                <p>Tuesday — Sunday</p>
-                <p>12am — 10pm</p>
+            <div className={styles.row}>
+                <p className={styles.green}>Tuesday — Saturday</p>
+                <p className={styles.black}>12am — 10pm</p>
+            </div>
+            <div className={styles.row}>
+                <p className={styles.green}>Sunday</p>
+                <p className={styles.black}>12am — 5pm</p>
+            </div>
             </div>
             <DocumentContainer>
             <section id={styles.mapPart}>

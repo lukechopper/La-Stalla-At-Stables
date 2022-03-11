@@ -23,18 +23,20 @@ function menu(props) {
             <div className={styles.mainContainer}>
             <div className={styles.leftCol}>
                 {data.map((menu, index) => {
-                    if(index === data.length - 1) return;
-                    if(index % 2 === 0){ //ODD
+                    let isLeftCol = false;
+                    if(menu.col === 'left') isLeftCol = true;
+                    if(menu.col !== 'right' && index % 2 === 0) isLeftCol = true;
+                    if(isLeftCol){ //EVEN
                         return <MenuSlice menu={menu} key={index} />
                     }
                 })}
             </div>
             <div className={styles.rightCol}>
                 {data.map((menu, index) => {
-                    if(index === data.length - 1){
-                        return <MenuSlice menu={menu} key={index} />
-                    }
-                    if(index % 2 !== 0){ //EVEN
+                    let isRightCol = false;
+                    if(menu.col === 'right') isRightCol = true;
+                    if(menu.col !== 'left' && index % 2 === 1) isRightCol = true;
+                    if(isRightCol){ //ODD
                         return <MenuSlice menu={menu} key={index} />
                     }
                 })}

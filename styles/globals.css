@@ -24,6 +24,26 @@ a {
   font-family: "Lato";
 }
 
+p[special=extraInfo1]{
+  color: green;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+p[special=extraInfo2]{
+  font-size: 25px;
+}
+
+@media (max-width: 527px){
+  p[special=extraInfo1]{
+    font-size: 25px;
+  }
+  p[special=extraInfo2]{
+    font-size: 21px;
+  }
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
