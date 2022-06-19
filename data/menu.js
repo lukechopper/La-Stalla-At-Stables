@@ -1,74 +1,11 @@
 export const data = [
     {
         title: "Lunch Menu",
-        time: "12pm — 3pm",
+        time: "11am — 5pm",
          items: [
              {
-                specialText: "Special set menu £12.95",
-                extraInfo: "<p special='extraInfo1'>2 courses</p>"
-             },
-            {
-                title: "Zuppa del Giorno",
-                desc: "Soup of the day"
-            },
-            {
-                title: "Soup of the day",
-                desc: "With crusty bread"
-            },
-            {
-                title: "Bruschetta",
-                desc: "Tomatoes marinated in garlic, basil, olive oil, crostini bread"
-            },
-            {
-                title: "Mushroom crostini",
-                desc: "Mushrooms cooked in cream, white wine, garlic sauce, served on crostini bread"
-            },
-            {
-                title: "Pate",
-                desc: "Chicken live pâté served with crostini bread and chutney"
-            },
-            {
-                title: "Calamary",
-                desc: "Deep-fried calamari served with tartar sauce and salad"
-            },
-            {
-                specialText: "Main",
-             },
-             {
-                title: "Tortellini",
-                desc: "Pasta stuffed with ricotta and spinach, cooked with cream cheese sauce"
-            },
-            {
-                title: "Spaghetti carbonara",
-                desc: "Spaghetti cooked with pancetta, egg yolk and creamy cheese sauce"
-            },
-            {
-                title: "Seabass",
-                desc: "Pan fried seabass fillet with garlic butter"
-            },
-            {
-                title: "Pollo ala crema",
-                desc: "Chicken breast with mushrooms, cream and white wine sauce"
-            },
-            {
-                specialText: "Extra sides",
-             },
-             {
-                title: "Fries",
-                price: "£2.00"
-            },
-            {
-                title: "Salad",
-                price: "£2.00"
-            },
-            {
-                title: "Potato",
-                price: "£2.00"
-            },
-            {
-                title: "Vegetables",
-                price: "£2.00"
-            },
+                specialText: "Set Menu"
+             }
          ]
     },
     {
@@ -856,6 +793,7 @@ export const data = [
     },
     {
         title: "Soft Drinks",
+        col: "left",
          items: [
              {
                  title: "Pepsi",
