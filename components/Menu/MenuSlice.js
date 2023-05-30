@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '../../styles/menu.module.css';
+import parseDescText from './parseDescText';
+
 
 function MenuSlice({ menu }) {
   return (
@@ -15,7 +17,7 @@ function MenuSlice({ menu }) {
 
       {menu.items.map((item, index) => (
         <div key={index}>
-          {!item.specialText ? (
+          {(!item.specialText && !item.extraInfo) ? (
             <>
               <h3
                 className={[
@@ -27,7 +29,7 @@ function MenuSlice({ menu }) {
               >
                 {item.title} {item.price && '-'} {item.price}
               </h3>
-              <p className={styles.desc}>{item.desc}</p>
+              <p className={styles.desc}>{parseDescText(item.desc)}</p>
             </>
           ) : (
             <>

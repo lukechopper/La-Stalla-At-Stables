@@ -35,12 +35,29 @@ p[special=extraInfo2]{
   font-size: 25px;
 }
 
+p[special=extraInfo3]{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p[special=extraInfo4]{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+
 @media (max-width: 527px){
   p[special=extraInfo1]{
     font-size: 25px;
   }
   p[special=extraInfo2]{
     font-size: 21px;
+  }
+  p[special=extraInfo3]{
+    font-size: 18px;
+  }
+  p[special=extraInfo4]{
+    font-size: 18px;
   }
 }
 
